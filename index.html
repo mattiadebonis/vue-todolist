@@ -10,9 +10,6 @@
     <!-- vue-->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
-    <!-- icone Fontawesome-->
-    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-
     <!-- font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
@@ -21,26 +18,26 @@
 </head>
 <body>
     <div id="root">
+
         <div class="margin_page">
             <h1>Prossime azioni</h1>
+
+            <!-- inserisci to do-->
+            <input @keyup.enter="aggiungiToDo" type="text" placeholder="Inserisci un nuovo to do" v-model="nuovoToDo">
+            <button @click="aggiungiToDo">Aggiungi</button>
+
+            <!-- visualizza to do da completare-->
             <ul class="elenco_to_do">
                 <li class="to_do" v-for="(toDo, index) in toDos" v-if="toDo.completato">
                     <i @click="cancellaToDo(index)">X</i>
                     {{toDo.nome}}
-                    
                 </li>
             </ul>
 
         </div>
     </div>
-    <br>
-    <p class="margin_page">
-        Creare con Vue una to-do list, in cui ogni elemento è un oggetto composto da:
-        - testo
-        - "completed", un booleano settato inizialmente a false.
-        Stampare in pagina un item per ogni elemento della to-do list.
-        Ogni item ha una "x" associata: cliccando su di essa, l'item viene rimosso dalla lista.
-        Predisporre un input per aggiungere un nuovo item alla lista: digitando il tasto invio oppure cliccando su un pulsante, il testo digitato viene aggiunto alla lista (all'interno di un nuovo oggetto con proprietà "completed" settata a false).</p>
+    
+    <!-- importa file javascript-->
     <script src="js/script.js"></script>
 </body>
 </html>
