@@ -17,7 +17,9 @@ var app = new Vue({
         ]
     },
     methods:{
-
+        cancellaToDo : function(indexDaRimuovere){
+            this.toDos.splice(indexDaRimuovere,1)
+        }
     }
 
 
