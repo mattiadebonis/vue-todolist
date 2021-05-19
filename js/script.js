@@ -4,11 +4,11 @@ var app = new Vue({
         toDos: [
             {
                 nome: "Portare Ragù a spasso",
-                completato: false
+                completato: true
             },
             {
                 nome: "Imbiancare ingresso",
-                completato: false
+                completato: true
             },
             {
                 nome: "Scrivere diario",
