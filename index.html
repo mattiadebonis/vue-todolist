@@ -24,9 +24,9 @@
         <div class="margin_page">
             <h1>Prossime azioni</h1>
             <ul class="elenco_to_do">
-                <li class="to_do">
+                <li class="to_do" v-for="toDo in toDos">
                     <i>X</i>
-                    da fare
+                    {{toDo.nome}}
                 </li>
             </ul>
 
