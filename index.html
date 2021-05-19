@@ -24,10 +24,9 @@
         <div class="margin_page">
             <h1>Prossime azioni</h1>
             <ul class="elenco_to_do">
-                <li class="to_do" v-for="toDo in toDos" v-if="toDo.completato">
-                    <i>X</i>
+                <li class="to_do" v-for="(toDo, index) in toDos" v-if="toDo.completato">
+                    <i @click="cancellaToDo(index)">X</i>
                     {{toDo.nome}}
-            
                     
                 </li>
             </ul>
